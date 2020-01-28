@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
     <link rel="stylesheet" type="text/css" href="css/flatpicker.css" />
     <link rel="stylesheet" href="css/fontawesome.css" />
+    <link rel="stylesheet" href="css/select2.min.css">
     <link rel="stylesheet" type="text/css" href="css/mainStyle.css" />
 </head>
 
@@ -436,15 +437,12 @@
                 </div>
 
                 <div class="search-data-wrapper">
-                    <form class="search-form">
                         <div class="search-input flexCenter">
-                            <input id="myInput" type="text" name="accountingSearch" placeholder="Search" />
+                            <input class="searchInput" type="text" name="accountingSearch" placeholder="Search" />
                             <img src="assets/images/search.png" class="search-icon" />
                         </div>
-                    </form>
                 </div>
             </div>
-
             <div class="flexBetween bagntion">
                 <div class="add-item-btn">
                     <a href="ACC_JE_ADN.html" class="save"><span><i class="fas fa-plus-circle fs-3x"></i></span>Add
@@ -453,43 +451,7 @@
 
                 <div class="flexBetween inner-bagntion">
                     <div class="filter">
-                        <!--<a href="#" class="filters"><span><i
-                                    class="fas fa-filter"></i></span><span>Fillter</span><span><i
-                                    class="fas fa-caret-down"></i></span></a>-->
-                        <!--<a href="#" class="choose"><span><i class="fas fa-bars"></i></span><span>Choose</span><span><i
-                                    class="fas fa-caret-down"></i></span></a>-->
-                        <!--<a href="#" class=""><span>Print</span><span><i class="fas fa-caret-down"></i></span></a>-->
-                        <a href="#" class="action"><span>Action</span><span><i class="fas fa-caret-down"></i></span></a>
-
-                        <!--<div class="filterMath d-none">
-                            <ul>
-                                <li>Export</li>
-                                <li>Export 2</li>
-                                <li>طباعه</li>
-                                <li>Send By Email</li>
-                                <li>Delete</li>
-                            </ul>
-                        </div>
-
-                        <div class="chooseMath d-none">
-                            <ul>
-                                <li>Export</li>
-                                <li>Export 2</li>
-                                <li>طباعه</li>
-                                <li>Send By Email</li>
-                                <li>Delete</li>
-                            </ul>
-                        </div>-->
-
-                        <div class="actionMath d-none">
-                            <ul>
-                                <li>Export</li>
-                                <li>Import</li>
-                                <li>Print</li>
-                                <li>PDF</li>
-                                <li>Delete</li>
-                            </ul>
-                        </div>
+                        <a href="#" class="action"><span>Action</span><span></a><i class="fas fa-caret-down"></i></span>
                     </div>
 
                     <div class="sort">
@@ -502,10 +464,13 @@
                 </div>
             </div>
 
+
             <div class="site-sections-wrapper">
                 <div class="box-data-container">
                     <div class="box-data-table-wrapper">
+                        
                         <table id="myTable" class="box-data-table">
+                            
                             <thead>
                                 <tr>
                                     <th>
@@ -518,46 +483,46 @@
                                     <th>
                                         <div class="ellipsisName">
                                             <span class="">Date</span>
-                                            <span class="sorts"><i class="fas fa-sort-amount-down"></i></span>
+                                            <span class="sorts"><i class="fas fa-sort-amount-up"></i></span>
                                         </div>
                                     </th>
                                     <th class="ellipsisOne">
                                         <div>
                                             <span class="">Refrence</span>
-                                            <span class="sorts"><i class="fas fa-sort-amount-down"></i></span>
+                                            <span class="sorts"><i class="fas fa-sort-amount-up"></i></span>
                                         </div>
                                     </th>
                                     <th class="ellipsisTwo">
                                         <div>
                                             <span class="">Summary</span>
-                                            <span class="sorts"><i class="fas fa-sort-amount-down"></i></span>
+                                            <span class="sorts"><i class="fas fa-sort-amount-up"></i></span>
                                         </div>
                                     </th>
                                     <th class="ellipsisThree">
                                         <div>
                                             <span class="">Debtor</span>
-                                            <span class="sorts"><i class="fas fa-sort-amount-down"></i></span>
+                                            <span class="sorts"><i class="fas fa-sort-amount-up"></i></span>
                                         </div>
                                     </th>
                                     <th class="ellipsisFour">
                                         <div>
                                             <span class="">creadtor</span>
-                                            <span class="sorts"><i class="fas fa-sort-amount-down"></i></span>
+                                            <span class="sorts"><i class="fas fa-sort-amount-up"></i></span>
                                         </div>
                                     </th>
                                     <th class="ellipsisFive">
                                         <div>
                                             <span class="">Total</span>
-                                            <span class="sorts"><i class="fas fa-sort-amount-down"></i></span>
+                                            <span class="sorts"><i class="fas fa-sort-amount-up"></i></span>
                                         </div>
                                     </th>
                                     <th class="ellipsisSix">
                                         <div>
                                             <span class="">Resources</span>
-                                            <span class="sorts"><i class="fas fa-sort-amount-down"></i></span>
+                                            <span class="sorts"><i class="fas fa-sort-amount-up"></i></span>
                                         </div>
                                     </th>
-                                    <th><span class="ellipsisAction">Action</span></th>
+                                    <th class="headOfAction"><span class="ellipsisAction">Action</span></th>
                                     <th>
                                         <!-- justForGrid -->
                                     </th>
@@ -610,7 +575,6 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <a href="bal7a">
                                         <td class="checkNum">
                                             <input class="" type="checkbox" id="" name="" />
                                         </td>
@@ -618,12 +582,12 @@
                                         <td><span>12-15-2016</span></td>
 
                                         <td class="ellipsisOne"><span>sh1</span></td>
-                                        <td class="ellipsisTwo"><span>wjkkj skjkjd kj</span></td>
+                                        <td class="ellipsisTwo"><span>aaaaaaaaa</span></td>
                                         <td class="ellipsisThree">
                                             <span><span class="depitorcredit">hussien</span></span>
                                         </td>
                                         <td class="ellipsisFour"><span><span class="depitorcredit">hossam</span></td>
-                                        <td class="ellipsisFive"><span>5130</span></td>
+                                        <td class="ellipsisFive"><span>1111</span></td>
                                         <td class="ellipsisSix"><span>vendor refund amount</span></td>
                                         <td>
                                             <div class="item-action">
@@ -638,11 +602,9 @@
                                         <td>
                                             <!-- 9-justForGrid -->
                                         </td>
-                                    </a>
                                 </tr>
 
                                 <tr>
-                                    <a href="bal7a">
                                         <td class="checkNum">
                                             <input class="" type="checkbox" id="" name="" />
                                         </td>
@@ -650,12 +612,12 @@
                                         <td><span>12-15-2016</span></td>
 
                                         <td class="ellipsisOne"><span>sh1</span></td>
-                                        <td class="ellipsisTwo"><span>wjkkj skjkjd kj</span></td>
+                                        <td class="ellipsisTwo"><span>bbbbbbbb</span></td>
                                         <td class="ellipsisThree">
                                             <span><span class="depitorcredit">hussien</span></span>
                                         </td>
                                         <td class="ellipsisFour"><span><span class="depitorcredit">hossam</span></td>
-                                        <td class="ellipsisFive"><span>5130</span></td>
+                                        <td class="ellipsisFive"><span>2222</span></td>
                                         <td class="ellipsisSix"><span>vendor refund amount</span></td>
                                         <td>
                                             <div class="item-action">
@@ -670,11 +632,9 @@
                                         <td>
                                             <!-- 9-justForGrid -->
                                         </td>
-                                    </a>
                                 </tr>
 
                                 <tr>
-                                    <a href="bal7a">
                                         <td class="checkNum">
                                             <input class="" type="checkbox" id="" name="" />
                                         </td>
@@ -682,12 +642,12 @@
                                         <td><span>12-15-2016</span></td>
 
                                         <td class="ellipsisOne"><span>sh1</span></td>
-                                        <td class="ellipsisTwo"><span>wjkkj skjkjd kj</span></td>
+                                        <td class="ellipsisTwo"><span>ddddddd</span></td>
                                         <td class="ellipsisThree">
                                             <span><span class="depitorcredit">hussien</span></span>
                                         </td>
                                         <td class="ellipsisFour"><span><span class="depitorcredit">hossam</span></td>
-                                        <td class="ellipsisFive"><span>5130</span></td>
+                                        <td class="ellipsisFive"><span>3333</span></td>
                                         <td class="ellipsisSix"><span>vendor refund amount</span></td>
                                         <td>
                                             <div class="item-action">
@@ -702,135 +662,6 @@
                                         <td>
                                             <!-- 9-justForGrid -->
                                         </td>
-                                    </a>
-                                </tr>
-
-                                <tr>
-                                    <a href="bal7a">
-                                        <td class="checkNum">
-                                            <input class="" type="checkbox" id="" name="" />
-                                        </td>
-
-                                        <td><span>12-15-2016</span></td>
-
-                                        <td class="ellipsisOne"><span>sh1</span></td>
-                                        <td class="ellipsisTwo"><span>wjkkj skjkjd kj</span></td>
-                                        <td class="ellipsisThree">
-                                            <span><span class="depitorcredit">hussien</span></span>
-                                        </td>
-                                        <td class="ellipsisFour"><span><span class="depitorcredit">hossam</span></td>
-                                        <td class="ellipsisFive"><span>5130</span></td>
-                                        <td class="ellipsisSix"><span>vendor refund amount</span></td>
-                                        <td>
-                                            <div class="item-action">
-                                                <div><i class="fas fa-edit"></i><a href="#">edit</a></div>
-                                                <div class="itemActionRed"><i class="far fa-trash-alt"></i><a
-                                                        href="#">delete</a></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <!-- 8-justForGrid -->
-                                        </td>
-                                        <td>
-                                            <!-- 9-justForGrid -->
-                                        </td>
-                                    </a>
-                                </tr>
-
-                                <tr>
-                                    <a href="bal7a">
-                                        <td class="checkNum">
-                                            <input class="" type="checkbox" id="" name="" />
-                                        </td>
-
-                                        <td><span>12-15-2016</span></td>
-
-                                        <td class="ellipsisOne"><span>sh1</span></td>
-                                        <td class="ellipsisTwo"><span>wjkkj skjkjd kj</span></td>
-                                        <td class="ellipsisThree">
-                                            <span><span class="depitorcredit">hussien</span></span>
-                                        </td>
-                                        <td class="ellipsisFour"><span><span class="depitorcredit">hossam</span></td>
-                                        <td class="ellipsisFive"><span>5130</span></td>
-                                        <td class="ellipsisSix"><span>vendor refund amount</span></td>
-                                        <td>
-                                            <div class="item-action">
-                                                <div><i class="fas fa-edit"></i><a href="#">edit</a></div>
-                                                <div class="itemActionRed"><i class="far fa-trash-alt"></i><a
-                                                        href="#">delete</a></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <!-- 8-justForGrid -->
-                                        </td>
-                                        <td>
-                                            <!-- 9-justForGrid -->
-                                        </td>
-                                    </a>
-                                </tr>
-
-                                <tr>
-                                    <a href="bal7a">
-                                        <td class="checkNum">
-                                            <input class="" type="checkbox" id="" name="" />
-                                        </td>
-
-                                        <td><span>12-15-2016</span></td>
-
-                                        <td class="ellipsisOne"><span>sh1</span></td>
-                                        <td class="ellipsisTwo"><span>wjkkj skjkjd kj</span></td>
-                                        <td class="ellipsisThree">
-                                            <span><span class="depitorcredit">hussien</span></span>
-                                        </td>
-                                        <td class="ellipsisFour"><span><span class="depitorcredit">hossam</span></td>
-                                        <td class="ellipsisFive"><span>5130</span></td>
-                                        <td class="ellipsisSix"><span>vendor refund amount</span></td>
-                                        <td>
-                                            <div class="item-action">
-                                                <div><i class="fas fa-edit"></i><a href="#">edit</a></div>
-                                                <div class="itemActionRed"><i class="far fa-trash-alt"></i><a
-                                                        href="#">delete</a></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <!-- 8-justForGrid -->
-                                        </td>
-                                        <td>
-                                            <!-- 9-justForGrid -->
-                                        </td>
-                                    </a>
-                                </tr>
-
-                                <tr>
-                                    <a href="bal7a">
-                                        <td class="checkNum">
-                                            <input class="" type="checkbox" id="" name="" />
-                                        </td>
-
-                                        <td><span>12-15-2016</span></td>
-
-                                        <td class="ellipsisOne"><span>sh1</span></td>
-                                        <td class="ellipsisTwo"><span>wjkkj skjkjd kj</span></td>
-                                        <td class="ellipsisThree">
-                                            <span><span class="depitorcredit">hussien</span></span>
-                                        </td>
-                                        <td class="ellipsisFour"><span><span class="depitorcredit">hossam</span></td>
-                                        <td class="ellipsisFive"><span>5130</span></td>
-                                        <td class="ellipsisSix"><span>vendor refund amount</span></td>
-                                        <td>
-                                            <div class="item-action">
-                                                <div><i class="fas fa-edit"></i><a href="#">edit</a></div>
-                                                <div class="itemActionRed"><i class="far fa-trash-alt"></i><a
-                                                        href="#">delete</a></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <!-- 8-justForGrid -->
-                                        </td>
-                                        <td>
-                                            <!-- 9-justForGrid -->
-                                        </td>
-                                    </a>
                                 </tr>
                             </tbody>
                         </table>
@@ -850,6 +681,15 @@
     <div class="hiddenAllItems"></div>
     <script src="js/jquery_v3.3.1.js"></script>
     <script src="js/flatpicker.js"></script>
+    <script src="js/dataTable.js"></script>
+    <script src="js/dataTabeButtons.js"></script>
+    <script src="js/buttons.flash.min.js"></script>
+    <script src="js/jszip.min.js"></script>
+    <script src="js/pdfmake.min.js"></script>
+    <script src="js/vfs_fonts.js"></script>
+    <script src="js/buttons.html5.min.js"></script>
+    <script src="js/buttons.print.min.js"></script>
+    <script src="js/select2.min.js"></script>
     <script src="js/mainScript.js"></script>
 </body>
 
