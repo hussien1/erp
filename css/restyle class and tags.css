@@ -1,0 +1,112 @@
+
+body {
+    /* Remove the Background */
+}
+
+/* Change the color */
+.billInputs select{
+    color: #333;
+}
+
+
+/* Add this */
+textarea:focus {
+    outline-color: #333;
+}
+
+/* remove  this */
+.add-item-btn {
+    
+}
+
+/* Add this */
+.add-item-btn button{
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    padding: 8px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    margin-right: 8px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+/* change the background color*/
+.save{
+    background-color: #0BAB6B;
+  }
+  
+  /* add this */
+  .discard{
+    background-color: rgb(177, 177, 177);
+  }
+
+
+  /* /////////////////////////////////////////////////////////////////////////////////////////// */
+/* remove the z-index */
+  .hiddenAllItems {
+    position: fixed;
+    top:50px;
+    height:100%;
+    width: 100%;
+  }
+
+/* changed from .item-action span to item-action a */
+  .item-action a {
+    display: inline-block;
+    font-size: 0.9em;
+    margin-right: 4px;
+    text-transform: capitalize;
+    color: inherit; /* add this */
+  }
+/* change the max-width to width  */
+  .actionMath,.filterMath,.chooseMath{
+    position: absolute;
+    top: 25px;
+    width:130px;
+    border:1px solid darkgray;
+    background:#fff;
+    text-align: left;
+  }
+
+    /* change from right 0 to left 0 */
+    .actionMath {
+        left: 0;
+    }
+/* change the padding  */
+.bagntion
+{
+  position: relative;
+  z-index: 101;
+  margin-top: 10px;
+  font-size: 14.5px;
+  padding:16px;
+}
+/* remove the color */
+
+.ACC-BTNS div{
+    width:inherit;
+    text-align: right;
+    color: #fff;
+  }
+  /* change from span to button and add color:#fff*/
+  .ACC-BTNS div span{
+    padding:6px 12px 8px;
+    border-radius: 4px;
+    color: #fff;
+  }
+/* change from span to button */
+
+  .ACC-BTNS div button:first-of-type{
+    background: #8438C2;
+    margin-right:4px;
+  }
+  /* change from span to button */
+
+  .ACC-BTNS div button:last-of-type{
+    background: #0BAB6B;
+  }

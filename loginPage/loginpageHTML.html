@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ERP Login System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="loginPageCSS.css" />
+    <script>
+    	
+    </script>
+</head>
+
+<body>
+    <div class="login-container">
+    	<div class="login-wrapper flex-center">
+    		<div class="login-widget-wrapper">
+    			<div class="company-info">
+    				<div class="erp-logo">
+    					<h1>HR System</h1>
+    					
+    				</div>
+    				<p>
+    					Registering to this website, you accept our <a href="#">Terms of Use</a> and our <a href="#">Privacy Policy</a>
+    				</p>
+    			</div>
+    			<div class="login-widget">
+    				<div class="user-login">
+    					<form id="sign-in-form" class="widget-form" onsubmit="return validateSignInForm()" method="post" name="signinForm">
+    						<div class="form-title">
+    							<h1>Sign in</h1>
+    						</div>
+    						<div class="input-wrapper">
+    							<span class="input-pholder">Username or Email</span>
+    							<input type="text" name="userName" class="signIn-username">
+    							<span class="invalid-text"></span>
+    						</div>
+    						<div class="input-wrapper">
+    							<span class="input-pholder" name="userPassword">Password</span>
+    							<input type="password" name="userPassword" class="signIn-userpass">
+    							<span class="invalid-text"></span>
+    							<img src="invisible.png" class="showPassImg" alt="Show Password" title="Show Password">
+    						</div>
+    						<input type="submit" value="Sign in" class="submit-btn">
+    					</form>
+    					<form id="sign-up-form" class="widget-form"  onsubmit="return validateSignUpForm()" method="post">
+    						<div class="form-title">
+    							<h1>Sign up</h1>
+    						</div>
+    						<div class="input-wrapper">
+    							<span class="input-pholder">Username</span>
+    							<input type="text" name="userName" class="signup-username">
+    							<span class="invalid-text">Already Exists</span>
+    						</div>
+    						<div class="input-wrapper">
+    							<span class="input-pholder">Email</span>
+    							<input type="email" name="userName" class="signup-useremail">
+    							<span class="invalid-text">Already Exists</span>
+    						</div>
+    						<div class="input-wrapper">
+    							<span class="input-pholder">Password</span>
+    							<input type="password" name="userPassword" class="signup-userpass">
+    							<span class="invalid-text">Already Exists</span>
+    							<img src="visible.png" class="showPassImg" alt="Show Password" title="Show Password">
+    						</div>
+    						<input type="submit" value="Sign up" class="sign-up-btn">
+    					</form>
+    					<form id="forget-pass-form" class="widget-form" onsubmit="return validateResetPassForm()" method="post">
+    						<div class="form-title">
+    							<h1>Reset password</h1>
+    							
+    							<p>
+    								Enter your username or email to reset your password. <br>
+    								You will receive an email with instructions on how to reset your password.	If you are experiencing problems resetting your password <a href="#">contact us</a> or <a href="#">send us an email</a>
+    							</p>
+    						</div>
+    						<div class="input-wrapper">
+    							<span class="input-pholder">Username or Email</span>
+    							<input type="text" name="userName" class="resetForm-input">
+    							<span class="invalid-text">Already Exists</span>
+    						</div>
+    						
+    						<input type="submit" value="Reset password" class="submit-btn">
+    					</form>
+
+    					<div class="register-forget">
+    						<span related-form="sign-up-form" class="signup-btn">Not a member? Sign up</span>
+    						<span related-form="sign-in-form" class="signin-btn">Already registered? Sign in</span>
+    						<span related-form="forget-pass-form" class="forgetpass-btn">I can't remember my password</span>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</body>
+<script src="../js/jquery_v3.3.1.js"></script>
+<script src="loginpageJS.js"></script>
+<script>
+	function validateSignInForm() {
+		let signInFormUserName = $('.signIn-username').val();
+		let signInFormUserPass = $('.signIn-userpass').val();
+		if(signInFormUserName === '' && signInFormUserPass === '') {
+			$('.signIn-username, .signIn-userpass').css('border-color', 'red');
+			$('.signIn-username').siblings('.invalid-text').html('You must enter username or email');
+			$('.signIn-userpass').siblings('.invalid-text').html('You must enter password');
+			$('.signIn-username, .signIn-userpass').siblings('.invalid-text').css('display', 'block');
+			return false;
+		} else if(signInFormUserName === '') {
+			$('.signIn-username').css('border-color', 'red');
+			$('.signIn-username').siblings('.invalid-text').html('You must enter username or email');
+			$('.signIn-username').siblings('.invalid-text').css('display', 'block');
+			return false;
+		} else if(signInFormUserPass === '') {
+			$('.signIn-userpass').css('border-color', 'red');
+			$('.signIn-userpass').siblings('.invalid-text').html('You must enter password');
+			$('.signIn-userpass').siblings('.invalid-text').css('display', 'block');
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+
+
+	function validateSignUpForm() {
+		let signUpFormUserName = $('.signup-username').val();
+		let signUpFormUserPass = $('.signup-userpass').val();
+		let signUpFormUserEmail = $('.signup-useremail').val();
+		if(signUpFormUserName === '' && signUpFormUserPass === '' && signUpFormUserEmail === '') {
+			$('.signup-username, .signup-userpass, .signup-useremail').css('border-color', 'red');
+			$('.signup-username').siblings('.invalid-text').html('You must enter username');
+			$('.signup-userpass').siblings('.invalid-text').html('You must enter password');
+			$('.signup-useremail').siblings('.invalid-text').html('You must enter email');
+			$('.signup-username, .signup-userpass, .signup-useremail').siblings('.invalid-text').css('display', 'block');
+			return false;
+		} else if(signUpFormUserName === '') {
+			$('.signup-username').css('border-color', 'red');
+			$('.signup-username').siblings('.invalid-text').html('You must enter username');
+			$('.signup-username').siblings('.invalid-text').css('display', 'block');
+			return false;
+		} else if(signUpFormUserPass === '') {
+			$('.signup-userpass').css('border-color', 'red');
+			$('.signup-userpass').siblings('.invalid-text').html('You must enter password');
+			$('.signup-userpass').siblings('.invalid-text').css('display', 'block');
+			return false;
+		} else if(signUpFormUserEmail === '') {
+			$('.signup-useremail').css('border-color', 'red');
+			$('.signup-useremail').siblings('.invalid-text').html('You must enter email');
+			$('.signup-useremail').siblings('.invalid-text').css('display', 'block');
+			return false;
+		} else {
+			return true;
+		}
+		
+	}
+	function validateResetPassForm() {
+		let resetFormUserName = $('.resetForm-input').val();
+		if(resetFormUserName === '') {
+			$('.resetForm-input').css('border-color', 'red');
+			$('.resetForm-input').siblings('.invalid-text').html('You must enter username or email');
+			$('.resetForm-input').siblings('.invalid-text').css('display', 'block');
+			return false;
+		} else {
+			return true;
+		}
+	};
+</script>
+</html>
