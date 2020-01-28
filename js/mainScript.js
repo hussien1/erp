@@ -96,20 +96,6 @@ $(document).ready(function() {
     }
   });
 
-  $(".filters").on("click", function() {
-    $(".filterMath").toggle();
-    $(
-      ".chooseMath,.actionMath,.ellipsisMenu,.msgs,.notification,.user-setting-data,.sub-nav-link-wrapper,.dateRangeTol"
-    ).hide();
-  });
-
-  $(".choose").on("click", function() {
-    $(".chooseMath").toggle();
-    $(
-      ".actionMath,.ellipsisMenu,.msgs,.notification,.filterMath,.user-setting-data,.sub-nav-link-wrapper,.dateRangeTol"
-    ).hide();
-  });
-
   $(".filter").on("click", function() {
  	$(".dt-buttons button").toggle();
     $(
@@ -117,11 +103,20 @@ $(document).ready(function() {
     ).hide();
   });
 
-  $(".hiddenAllItems,.data-title-search-container,.box-data-table-wrapper").on(
+  $(".data-title-search-container,.box-data-table-wrapper").on(
     "click",
     function() {
       $(
         ".chooseMath,.actionMath,.msgs,.notification,.filterMath,.user-setting-data,.sub-nav-link-wrapper,.dateRangeTol,.dt-buttons button"
+	  ).hide();
+    }
+  );
+
+  $(".hiddenAllItems").on(
+    "click",
+    function() {
+      $(
+        ".chooseMath,.actionMath,.msgs,.notification,.filterMath,.user-setting-data,.sub-nav-link-wrapper,.dateRangeTol,.dt-buttons button,.ellipsisMenu"
 	  ).hide();
     }
   );
@@ -246,7 +241,7 @@ $(document).ready(function() {
     }
   });
 
-  $("#myTable th:not(.ellipsis)").on("click", function() {
+  $("#myTable th:not(.ellipsis,#myTable th:first-of-type)").on("click", function() {
     $("#myTable th .sorts .fas:first-of-type").toggleClass("rotate180");
   });
 
@@ -459,7 +454,7 @@ $(document).ready(function() {
     .on("click", function() {
       $(this)
         .next("ul")
-        .toggle();
+        .toggleClass("d-none");
       $(this)
         .children(".fas")
         .toggle();

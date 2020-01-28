@@ -278,8 +278,8 @@ textarea:focus,textarea:active,textarea:hover{
 
 .user-data {
   position: relative;
-/*   z-index: 1;
- */}
+  z-index: 1;
+}
 
 .user-data .notMsg{
   margin-left:8px;
@@ -338,8 +338,8 @@ textarea:focus,textarea:active,textarea:hover{
   width: 8px;
   height: 8px;
   position: relative;
-/*   z-index: 1001;
- */  top: 1px;
+  z-index: 1001;
+  top: 1px;
 }
 .user-setting-data {
   position: absolute;
@@ -399,8 +399,8 @@ textarea:focus,textarea:active,textarea:hover{
 
 .sub-nav-link-wrapper {
   position: absolute;
-/*   z-index: 999;
- */  min-width: 180px;
+  z-index: 999;
+  min-width: 180px;
   left:0;
   top: 34px;
   background-color:#3B3B3B;
@@ -519,7 +519,6 @@ textarea:focus,textarea:active,textarea:hover{
 /*** Site data CSS ***/
 .site-data-container {
   height: calc(100% - 50px);
-  overflow: auto;
 }
 .site-data-wrapper {
   padding: 16px 0 32px ;
@@ -636,9 +635,8 @@ textarea:focus,textarea:active,textarea:hover{
 .site-sections-wrapper {
   margin-top: 16px;
   position: relative;
-/*   z-index: 100;
- */  min-height: 600px;
-    overflow: auto;
+  z-index: 100;
+  
 }
 .left-site-section {
   width: 55%;
@@ -775,8 +773,8 @@ textarea:focus,textarea:active,textarea:hover{
 .box-data-table thead {
   border-top:1px solid #F5F5F5;
   position: relative;
-/*   z-index: 2;
- */  width: 100%;
+  z-index: 2;
+  width: 100%;
   padding-bottom:8px;
 }
 
@@ -818,7 +816,7 @@ tr:nth-child(even) {
 .ellipsis {
   cursor: pointer;
   position: relative;
-  z-index: 2;
+  z-index: 999;
 }
 
 .ellipsisMenu {
@@ -828,7 +826,7 @@ tr:nth-child(even) {
   right:0;
   border: 1.5px solid darkgray;
   background: #fff;
-  z-index: -10;
+  z-index:1;
   display: none;
   font-size: 16px;
 }
@@ -1152,7 +1150,7 @@ tr:nth-child(even) {
     border-collapse: collapse;
     padding: 8px;
     position: relative;
-    z-index: 999;
+    z-index: 1;
     text-align: center;
   }
 }
@@ -1446,16 +1444,16 @@ tr:nth-child(even) {
 
 
  .data-title-search-container {
-/*   z-index: 101;
- */  position: relative;
+  z-index: 101;
+  position: relative;
 }
 
 .accountingForm .data-title-search-container {
   border-bottom: 1px solid darkgray;
   padding:16px 0 16px 16px;
   background: #fff;
-/*   z-index: 101;
- */  position: relative;
+  z-index: 101;
+  position: relative;
 }
 .pageName a,.pageName span:last-of-type{
   font-size: 16px;
@@ -1767,8 +1765,8 @@ tr:nth-child(even) {
   background: #fff;
   padding: 8px 0;
   position: relative;
-/*   z-index: 101;
- */}
+  z-index: 101;
+}
 .chartOfAccounts .donate {
   width: 80%;
   margin: auto;
@@ -1879,8 +1877,8 @@ tr:nth-child(even) {
   left:0;
   width:100%;
   padding-top:6px;
-/*   z-index: 1;
- */  background: #fff;
+  z-index: 1;
+  background: #fff;
 }
 
 
@@ -2037,8 +2035,8 @@ cursor: pointer;
    padding: 16px;
    margin-bottom: 32px;
    position: relative;
-/*    z-index: 100;
- */ }
+   z-index: 100;
+ }
  .accountTransactions .chooseMath {
    left:0;
  }
@@ -2051,12 +2049,12 @@ cursor: pointer;
  .ACC-T-F .requ{
    width:24.2%;
    position: relative;
-/*    z-index: 101;
- */ } 
+   z-index: 101;
+ } 
 
  .ACC-T-F .requ:first-of-type{
-/*   z-index: 102;
- */}
+  z-index: 102;
+}
  .chartOfAccountsForm .requ{
    width: 19%;
    margin-right: 8px;
@@ -2100,8 +2098,8 @@ cursor: pointer;
   border-top:none;
   padding:4px;
   display: none;
-/*   z-index: 102;
- */}
+  z-index: 102;
+}
 
 
 .ACC-T-F .dateRangeTol li{
@@ -2128,8 +2126,8 @@ cursor: pointer;
 .ACC-T-F .dateRangeTol input{
   position: relative;
   opacity: 0;
-/*   z-index:1;
- */  height:30px;
+  z-index:1;
+  height:30px;
   margin: 0;
 }
 
@@ -2225,8 +2223,8 @@ cursor: pointer;
 
 .box-data-table-wrapper {
   position: relative;
-/*   z-index: 100;
- */  width: 100%;
+  z-index: 100;
+  width: 100%;
 }
 
 .itemTransactionsForm .ACC-T-F .requ{
@@ -2434,7 +2432,7 @@ cursor: pointer;
   flex-direction: column;
   position: absolute;
   top: 0;
-  z-index: 999;
+  z-index: 9;
   left: 59%;
 }
 
