@@ -449,18 +449,10 @@ $(document).ready(function() {
     });
   });
 
-  $(".chartOfAccounts .inner-side ul li .bonga")
-    .children(".fas")
-    .on("click", function() {
-      $(this)
-        .next("ul")
-        .toggleClass("d-none");
-      $(this)
-        .children(".fas")
-        .toggle();
-      $(this)
-        .next("ul li")
-        .addClass("clearSpeace");
+  $(".chartOfAccounts .inner-side ul li .bonga")/* .children(".fas") */.on("click", function() {
+      $(this).next("ul").toggleClass("d-none");
+      $(this).children(".fas").toggle();
+      $(this).next("ul li").addClass("clearSpeace");
       $(".tree li ul li:last-child").addClass("clearSpeace");
     });
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>LOCATION</title>
+    <title>SALES SETUP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
     <link rel="stylesheet" type="text/css" href="css/flatpicker.css" />
@@ -427,348 +427,78 @@
         </div>
     </div>
 
-    <section class="site-data-container">
-        <div class="site-data-wrapper">
-            <div class="data-title-search-container flexBetween">
-                <div class="data-title-wrapper breadcrumb-wrapper">
-                    <div class="breadcrumb">
-                        <h2>LOCATION</h2>
-                    </div>
-                </div>
-
-                <div class="search-data-wrapper">
-                    <form class="search-form">
-                        <div class="search-input flexCenter">
-                            <input id="myInput" type="text" name="accountingSearch" placeholder="Search" />
-                            <img src="assets/images/search.png" class="search-icon" />
+    <section class="site-data-container accountingForm currencyform">
+        <form action="">
+            <div class="site-data-wrapper">
+                <div class="data-title-search-container">
+                    <div class="data-title-wrapper breadcrumb-wrapper">
+                        <div class="pageName">
+                            <span><a href="#">SALES SETUP /</span></a><span>NEW</span>
                         </div>
-                    </form>
-                </div>
-            </div>
-
-            <div class="flexBetween bagntion">
-                <div class="add-item-btn">
-                    <a href="INV_L_ADN.html" class="save"><span><i class="fas fa-plus-circle fs-3x"></i></span>Add
-                        New</a>
-                </div>
-
-                <div class="flexBetween inner-bagntion">
-                    <div class="filter">
-                        <a href="#" class="action"><span>Action</span><span></a><i class="fas fa-caret-down"></i></span>
                     </div>
 
-                    <div class="sort">
-                        <span class="nB">
-                            <span><i class="fas fa-angle-left"></i></span>
-                            <span><i class="fas fa-angle-right"></i></span>
-                        </span>
-                        <span class="pageNum"> <span>1</span>/<span>2</span> </span>
+
+                    <div class="bagntion flex">
+                        <div class="add-item-btn">
+                            <button class="save" type="submit">Save</button>
+                            <button class="discard" type="reset">Discard</button>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="site-sections-wrapper flex">
+                <div class="leftPart">
 
-            <div class="site-sections-wrapper">
-                <div class="box-data-container">
-                    <div class="box-data-table-wrapper">
-                        <table id="myTable" class="box-data-table">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        <form>
-                                            <div class="form-group checkNum">
-                                                <input class="" type="checkbox" id="toggle" />
-                                            </div>
-                                        </form>
-                                    </th>
-                                    <th>
-                                        <div class="ellipsisName">
-                                            <span class="">Location Code</span>
-                                            <span class="sorts"><i class="fas fa-sort-amount-up"></i></span>
-                                        </div>
-                                    </th>
-                                    <th class="ellipsisOne">
-                                        <div>
-                                            <span class="">Location Name</span>
-                                            <span class="sorts"><i class="fas fa-sort-amount-up"></i></span>
-                                        </div>
-                                    </th>
-                                    <th class="ellipsisTwo">
-                                        <div>
-                                            <span class="">Address</span>
-                                            <span class="sorts"><i class="fas fa-sort-amount-up"></i></span>
-                                        </div>
-                                    </th>
-                                    <th class="ellipsisThree">
-                                        <div>
-                                            <span class="">Phone</span>
-                                            <span class="sorts"><i class="fas fa-sort-amount-up"></i></span>
-                                        </div>
-                                    </th>
-                                    <th class="ellipsisFour">
-                                        <div>
-                                            <span class="">Secondry Phone</span>
-                                            <span class="sorts"><i class="fas fa-sort-amount-up"></i></span>
-                                        </div>
-                                    </th>
-                                    <th class="headOfAction"><span class="ellipsisAction">Action</span></th>
-                                    <th>
-                                        <!-- justForGrid -->
-                                    </th>
+                    <div class="box-data-container">
 
-                                    <th class="ellipsis">
-                                        <i class="fas fa-ellipsis-v"></i>
+                        <div class="billInputs flexBetween">
+                            <div class="billInputsLeft">
 
-                                        <div class="ellipsisMenu">
-                                            <ul>
-                                                <li>
-                                                    <div class="ellipsisTap ellipsisCheck-one">
-                                                        <span>Location Name</span>
-                                                        <input type="checkbox" />
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="ellipsisTap ellipsisCheck-two">
-                                                        <span>Address</span>
-                                                        <input type="checkbox" />
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="ellipsisTap ellipsisCheck-three">
-                                                        <span>Phone</span>
-                                                        <input type="checkbox" />
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="ellipsisTap ellipsisCheck-four">
-                                                        <span>Secondry Phone</span>
-                                                        <input type="checkbox" />
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr onclick="location.href='http://#';">
-                                        <td class="checkNum">
-                                            <input class="" type="checkbox" id="" name="" />
-                                        </td>
+                                <div class="flexBetween billOpject">
+                                    <label for="">Sales account</label>
+                                    <select name="" id="">
+                                        <option value="">option one</option>
+                                        <option value="">option one</option>
+                                        <option value="">option one</option>
+                                    </select>
+                                </div>
 
-                                        <td><span>N1</span></td>
+                                <div class="flexBetween billOpject">
+                                    <label for="">Sales paypal account</label>
+                                    <select name="" id="">
+                                        <option value="">option one</option>
+                                        <option value="">option one</option>
+                                        <option value="">option one</option>
+                                    </select>
+                                </div>
 
-                                        <td class="ellipsisOne"><span>Nozha</span></td>
-                                        <td class="ellipsisTwo"><span>10 ST Nozha-MesrElGdida</span></td>
-                                        <td class="ellipsisThree">
-                                            <span>01023552241</span>
-                                        </td>
-                                        <td class="ellipsisFour">
-                                            <span>01023552558</span>
-                                        </td>
-                                        <td>
-                                            <div class="item-action">
-                                                <div><i class="fas fa-edit"></i><a href="#">edit</a></div>
-                                                <div class="itemActionRed"><i class="far fa-trash-alt"></i><a
-                                                        href="#">delete</a></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <!-- 8-justForGrid -->
-                                        </td>
-                                        <td>
-                                            <!-- 9-justForGrid -->
-                                        </td>
-                                </tr>
 
-                                <tr onclick="location.href='http://#';">
-                                        <td class="checkNum">
-                                            <input class="" type="checkbox" id="" name="" />
-                                        </td>
+                                
+                                
+                            </div>
 
-                                        <td><span>N1</span></td>
-
-                                        <td class="ellipsisOne"><span>Nozha</span></td>
-                                        <td class="ellipsisTwo"><span>10 ST Nozha-MesrElGdida</span></td>
-                                        <td class="ellipsisThree">
-                                            <span>01023552241</span>
-                                        </td>
-                                        <td class="ellipsisFour">
-                                            <span>01023552558</span>
-                                        </td>
-                                        <td>
-                                            <div class="item-action">
-                                                <div><i class="fas fa-edit"></i><a href="#">edit</a></div>
-                                                <div class="itemActionRed"><i class="far fa-trash-alt"></i><a
-                                                        href="#">delete</a></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <!-- 8-justForGrid -->
-                                        </td>
-                                        <td>
-                                            <!-- 9-justForGrid -->
-                                        </td>
-                                </tr>
-
-                                <tr onclick="location.href='http://#';">
-                                        <td class="checkNum">
-                                            <input class="" type="checkbox" id="" name="" />
-                                        </td>
-
-                                        <td><span>N1</span></td>
-
-                                        <td class="ellipsisOne"><span>Nozha</span></td>
-                                        <td class="ellipsisTwo"><span>10 ST Nozha-MesrElGdida</span></td>
-                                        <td class="ellipsisThree">
-                                            <span>01023552241</span>
-                                        </td>
-                                        <td class="ellipsisFour">
-                                            <span>01023552558</span>
-                                        </td>
-                                        <td>
-                                            <div class="item-action">
-                                                <div><i class="fas fa-edit"></i><a href="#">edit</a></div>
-                                                <div class="itemActionRed"><i class="far fa-trash-alt"></i><a
-                                                        href="#">delete</a></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <!-- 8-justForGrid -->
-                                        </td>
-                                        <td>
-                                            <!-- 9-justForGrid -->
-                                        </td>
-                                </tr>
-
-                                <tr onclick="location.href='http://#';">
-                                        <td class="checkNum">
-                                            <input class="" type="checkbox" id="" name="" />
-                                        </td>
-
-                                        <td><span>N1</span></td>
-
-                                        <td class="ellipsisOne"><span>Nozha</span></td>
-                                        <td class="ellipsisTwo"><span>10 ST Nozha-MesrElGdida</span></td>
-                                        <td class="ellipsisThree">
-                                            <span>01023552241</span>
-                                        </td>
-                                        <td class="ellipsisFour">
-                                            <span>01023552558</span>
-                                        </td>
-                                        <td>
-                                            <div class="item-action">
-                                                <div><i class="fas fa-edit"></i><a href="#">edit</a></div>
-                                                <div class="itemActionRed"><i class="far fa-trash-alt"></i><a
-                                                        href="#">delete</a></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <!-- 8-justForGrid -->
-                                        </td>
-                                        <td>
-                                            <!-- 9-justForGrid -->
-                                        </td>
-                                </tr>
-
-                                <tr onclick="location.href='http://#';">
-                                        <td class="checkNum">
-                                            <input class="" type="checkbox" id="" name="" />
-                                        </td>
-
-                                        <td><span>N1</span></td>
-
-                                        <td class="ellipsisOne"><span>Nozha</span></td>
-                                        <td class="ellipsisTwo"><span>10 ST Nozha-MesrElGdida</span></td>
-                                        <td class="ellipsisThree">
-                                            <span>01023552241</span>
-                                        </td>
-                                        <td class="ellipsisFour">
-                                            <span>01023552558</span>
-                                        </td>
-                                        <td>
-                                            <div class="item-action">
-                                                <div><i class="fas fa-edit"></i><a href="#">edit</a></div>
-                                                <div class="itemActionRed"><i class="far fa-trash-alt"></i><a
-                                                        href="#">delete</a></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <!-- 8-justForGrid -->
-                                        </td>
-                                        <td>
-                                            <!-- 9-justForGrid -->
-                                        </td>
-                                </tr>
-
-                                <tr onclick="location.href='http://#';">
-                                        <td class="checkNum">
-                                            <input class="" type="checkbox" id="" name="" />
-                                        </td>
-
-                                        <td><span>N1</span></td>
-
-                                        <td class="ellipsisOne"><span>Nozha</span></td>
-                                        <td class="ellipsisTwo"><span>10 ST Nozha-MesrElGdida</span></td>
-                                        <td class="ellipsisThree">
-                                            <span>01023552241</span>
-                                        </td>
-                                        <td class="ellipsisFour">
-                                            <span>01023552558</span>
-                                        </td>
-                                        <td>
-                                            <div class="item-action">
-                                                <div><i class="fas fa-edit"></i><a href="#">edit</a></div>
-                                                <div class="itemActionRed"><i class="far fa-trash-alt"></i><a
-                                                        href="#">delete</a></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <!-- 8-justForGrid -->
-                                        </td>
-                                        <td>
-                                            <!-- 9-justForGrid -->
-                                        </td>
-                                </tr>
-
-                                <tr onclick="location.href='http://#';">
-                                        <td class="checkNum">
-                                            <input class="" type="checkbox" id="" name="" />
-                                        </td>
-
-                                        <td><span>N1</span></td>
-
-                                        <td class="ellipsisOne"><span>Nozha</span></td>
-                                        <td class="ellipsisTwo"><span>10 ST Nozha-MesrElGdida</span></td>
-                                        <td class="ellipsisThree">
-                                            <span>01023552241</span>
-                                        </td>
-                                        <td class="ellipsisFour">
-                                            <span>01023552558</span>
-                                        </td>
-                                        <td>
-                                            <div class="item-action">
-                                                <div><i class="fas fa-edit"></i><a href="#">edit</a></div>
-                                                <div class="itemActionRed"><i class="far fa-trash-alt"></i><a
-                                                        href="#">delete</a></div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <!-- 8-justForGrid -->
-                                        </td>
-                                        <td>
-                                            <!-- 9-justForGrid -->
-                                        </td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-
+                            <div class="billInputsRight">
+                                <div class="flexBetween billOpject">
+                                    <label for="">Sales discount account</label>
+                                    <select name="" id="">
+                                        <option value="">option one</option>
+                                        <option value="">option one</option>
+                                        <option value="">option one</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+
+                </div><!-- LeftPart -->
+
+
+                <div class="rightPart"></div>
+
             </div>
-        </div>
+        </form>
     </section>
-         <div class="hiddenAllItems"></div>
+    <div class="hiddenAllItems"></div>
     <script src="js/jquery_v3.3.1.js"></script>
     <script src="js/flatpicker.js"></script>
     <script src="js/dataTable.js"></script>
