@@ -2409,14 +2409,7 @@ cursor: pointer;
   font-family: "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-align: left;
   font-weight: normal;
-  /*border-radius: 4px;
-  */color:#666;
-  /*-webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  *//*border: 1px solid transparent;
-  border-bottom: 1px solid #ddd;*/
+  color:#666;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
